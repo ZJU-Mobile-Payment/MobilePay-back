@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="back">
+    <output-path>$PROJECT_DIR$/out/artifacts/back</output-path>
+    <root id="archive" name="back.war">
+      <element id="artifact" artifact-name="MobilePay-back:war exploded" />
+    </root>
+  </artifact>
+</component>
