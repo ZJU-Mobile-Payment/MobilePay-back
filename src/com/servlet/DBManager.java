@@ -9,18 +9,15 @@ import java.util.logging.Logger;
 
 public class DBManager extends HttpServlet {
     ServletConfig config;                   //定义一个ServletConfig对象
-    private static String username;         //定义数据库用户名
-    private static String password;         //定义数据库连接密码
-    private static String url;              //定义数据库连接URL
+    private static String username = "root";         //定义数据库用户名
+    private static String password = "123456";         //定义数据库连接密码
+    private static String url = "jdbc:mysql://47.106.195.214:3306/mobile_payment";              //定义数据库连接URL
     private static Connection connection;   //定义连接
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);                                        //继承父类的init()方法
         this.config = config;                                      //获取配置信息
-        username = config.getInitParameter("root");             //获取数据库用户名
-        password = config.getInitParameter("");                 //获取数据库连接密码
-        url = config.getInitParameter("jdbc:mysql://47.106.195.214:3306/mobile_payment");         //获取数据库连接URL
     }
 
     //连接数据库

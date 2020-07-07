@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 
 
 public class SearchServlet extends HttpServlet {
+    /*
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -39,10 +40,12 @@ public class SearchServlet extends HttpServlet {
             out.write(jsonObject.toString());
         }
     }
-    private Boolean verifyLogin(String userName, String password) {
+    private Boolean verifyLogin(int userName, String password) {
         User user = UserDAO.queryUser(userName);
         //账户密码验证
         return null != user && password.equals(user.getPassword());
     }
+
+     */
 }
 
