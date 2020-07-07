@@ -25,7 +25,7 @@ public class BillDAO {
 
         //SQL查询语句
         StringBuilder sqlStatement = new StringBuilder();
-        sqlStatement.append("select * from bill where userid=?");        //问号？的地方会被id替换
+        sqlStatement.append("select * from bill natural join Bus where userid=?");        //问号？的地方会被id替换
 
         Map<String, String> message = new HashMap<>();
         JSONObject jsonObject = new JSONObject();
@@ -40,7 +40,7 @@ public class BillDAO {
             for(int i = 1;resultSet.next();i++) {
                 message.put("billid", ""+String.valueOf(resultSet.getInt("billid")));
                 message.put("userid", ""+String.valueOf(resultSet.getInt("userid")));
-                message.put("busid", ""+String.valueOf(resultSet.getInt("busid")));
+                message.put("bus", String.valueOf(resultSet.getString("location")) + String.valueOf(resultSet.getInt("busid")) + "路公交");
                 message.put("cost", ""+String.valueOf(resultSet.getInt("cost")));
                 time = new Date(resultSet.getTimestamp("time").getTime());
                 String taketime=formattime.format(time);

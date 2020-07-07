@@ -8,11 +8,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DBManager extends HttpServlet {
-    ServletConfig config;                   //定义一个ServletConfig对象
-    private static String username = "root";         //定义数据库用户名
-    private static String password = "123456";         //定义数据库连接密码
-    private static String url = "jdbc:mysql://47.106.195.214:3306/mobile_payment";              //定义数据库连接URL
-    private static Connection connection;   //定义连接
+    ServletConfig config;                                                           //定义一个ServletConfig对象
+    private static String username = "root";                                        //定义数据库用户名
+    private static String password = "123456";                                      //定义数据库连接密码
+    private static String url = "jdbc:mysql://47.106.195.214:3306/mobile_payment";  //定义数据库连接URL
+    private static Connection connection;                                           //定义连接
 
     @Override
     public void init(ServletConfig config) throws ServletException {

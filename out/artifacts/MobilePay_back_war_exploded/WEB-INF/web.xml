@@ -28,4 +28,36 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ModifyServlet</servlet-name>
+        <servlet-class>com.servlet.ModifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ModifyServlet</servlet-name>
+        <url-pattern>/Modify</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.servlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/Delete</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>QueryBill</servlet-name>
+        <servlet-class>com.servlet.QueryBill</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QueryBill</servlet-name>
+        <url-pattern>/QueryBill</url-pattern>
+    </servlet-mapping>
 </web-app>

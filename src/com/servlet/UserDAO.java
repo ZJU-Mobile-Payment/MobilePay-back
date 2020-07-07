@@ -57,8 +57,7 @@ public class UserDAO {
         PreparedStatement preparedStatement = null;
 
         //SQL查询语句
-        Random rm = new Random();
-        String username = "用户" + (rm.nextInt(10000)+1);
+        String username = "用户" + id;
         StringBuilder sqlStatement = new StringBuilder();
         sqlStatement.append("insert into user (id, password, username, isadmin) values (?, ?, ?, 0)");        //问号？的地方会被id替换
 
