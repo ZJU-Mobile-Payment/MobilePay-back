@@ -14,13 +14,13 @@ import java.sql.*;
  * Servlet implementation class LoginTest
  */
 
-public class Login extends HttpServlet {
+public class Location extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public Location() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -43,16 +43,17 @@ public class Login extends HttpServlet {
         PrintWriter out = response.getWriter();
         Connection con;
         Statement sql;
-        String logname = request.getParameter("logname").trim();
-        String password = request.getParameter("password").trim();
-        String uri = "jdbc:mysql://47.106.195.214:3306/makefriend";
+
+        String id = request.getParameter("id").trim();
+        String uri = "jdbc:mysql://47.106.195.214:3306/mobile_payment?serverTimezone=GMT%2B8&useSSL=false";
         try {
             con = DriverManager.getConnection(uri,"root","123456");
-            String condition = "select * from member where logname = '"+logname+"' and password = '"+password+"'";
+            String condition = "select state from healthcode where id = '"+id+"'";
             sql = con.prepareStatement(condition);
             ResultSet rSet = sql.executeQuery(condition);
             if(rSet.next()) {
-                out.println("login successfully!");
+                String state = rSet.getString(1);
+                out.println(state);
             }
             else {
                 out.println("can not login!");

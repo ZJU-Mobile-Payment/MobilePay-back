@@ -20,4 +20,31 @@
         <servlet-name>Login</servlet-name>
         <url-pattern>/mustLogin</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Question</servlet-name>
+        <servlet-class>com.servlet.Question</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Question</servlet-name>
+        <url-pattern>/ques</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>illdegree</servlet-name>
+        <servlet-class>com.servlet.illdegree</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>illdegree</servlet-name>
+        <url-pattern>/degree</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>location</servlet-name>
+        <servlet-class>com.servlet.Location</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>location</servlet-name>
+        <url-pattern>/state</url-pattern>
+    </servlet-mapping>
 </web-app>
