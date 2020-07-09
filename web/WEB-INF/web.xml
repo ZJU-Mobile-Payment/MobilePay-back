@@ -60,4 +60,22 @@
         <servlet-name>QueryBill</servlet-name>
         <url-pattern>/QueryBill</url-pattern>
     </servlet-mapping>
+
+	<servlet>
+		<servlet-name>CardBind</servlet-name>
+		<servlet-class>com.servlet.CardBind</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CardBind</servlet-name>
+		<url-pattern>/must_bind</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BindServlet</servlet-name>
+		<servlet-class>com.servlet.BindServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BindServlet</servlet-name>
+		<url-pattern>/bind</url-pattern>
+	</servlet-mapping>
 </web-app>
