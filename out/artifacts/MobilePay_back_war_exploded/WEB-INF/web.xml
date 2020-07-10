@@ -78,4 +78,38 @@
 		<servlet-name>BindServlet</servlet-name>
 		<url-pattern>/bind</url-pattern>
 	</servlet-mapping>
+
+    <servlet>
+        <servlet-name>QueryHealth</servlet-name>
+        <servlet-class>com.servlet.QueryHealth</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QueryHealth</servlet-name>
+        <url-pattern>/queryState</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminStaticsServlet</servlet-name>
+        <servlet-class>com.servlet.AdminStaticsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminStaticsServlet</servlet-name>
+        <url-pattern>/AdminStatics</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>PaymentServlet</servlet-name>
+        <servlet-class>com.servlet.PaymentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaymentServlet</servlet-name>
+        <url-pattern>/Payment</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>StaticsServlet</servlet-name>
+        <servlet-class>com.servlet.StaticsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StaticsServlet</servlet-name>
+        <url-pattern>/Statics</url-pattern>
+    </servlet-mapping>
 </web-app>
