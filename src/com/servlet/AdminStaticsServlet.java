@@ -28,7 +28,7 @@ public class AdminStaticsServlet extends HttpServlet {
             //初始化
             show a = new show();
             a.setBusid(busid);
-            a.setUserid(userid);
+            a.setUserid(userid);git add .
             a.setStarttime(currentDate);
             //a.setPeriod(period);
 

@@ -140,7 +140,14 @@ public class pay {
             		pstmt3.setFloat(1,newdpt); 
             		pstmt3.setString(2,cnum); 
             		pstmt3.executeUpdate();
-        		        			
+
+					String sql4 = "update billcheck set billnum = billnum + 1,lastcost = ? where usrid = ?";
+					PreparedStatement pstmt4 = conn.prepareStatement(sql4);
+					pstmt4.setInt(2,this.userid);
+					pstmt4.setInt(1,this.cost);
+					pstmt4.executeUpdate();
+
+
         			break;
         		}
         		

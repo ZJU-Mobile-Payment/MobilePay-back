@@ -112,4 +112,13 @@
         <servlet-name>StaticsServlet</servlet-name>
         <url-pattern>/Statics</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BillcheckServlet</servlet-name>
+        <servlet-class>com.servlet.BillcheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BillcheckServlet</servlet-name>
+        <url-pattern>/Billcheck</url-pattern>
+    </servlet-mapping>
 </web-app>
