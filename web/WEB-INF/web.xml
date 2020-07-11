@@ -121,4 +121,14 @@
         <servlet-name>BillcheckServlet</servlet-name>
         <url-pattern>/Billcheck</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GethstServlet</servlet-name>
+        <servlet-class>com.servlet.GethstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GethstServlet</servlet-name>
+        <url-pattern>/Gethst</url-pattern>
+    </servlet-mapping>
+
 </web-app>
