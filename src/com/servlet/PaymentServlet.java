@@ -44,7 +44,8 @@ public class PaymentServlet extends HttpServlet {
 
             String hint = null;
             if (!ispermitted) {
-                jsonObject.put("results","Your healthstate does not meet the requirements and you can't pay for the bus");
+                jsonObject.put("result","Your healthstate does not meet the requirements and you can't pay for the bus");
+                jsonObject.put("cost",null);
                 a.wPassenger();
             } else {
                 a.wPassenger();
@@ -53,11 +54,7 @@ public class PaymentServlet extends HttpServlet {
                 jsonObject.put("result", "Successfully Payed!");
                 jsonObject.put("cost",String.valueOf(buscost));
             }
-            //jsonObject.put("params", params);
-            //String costb = jsonObject.getString("cost");
-            //String c = String.valueOf(jsonObject);
-            //JSONObject d = JSONObject.fromObject(c);
-            //String costd = d.getString("cost");
+
             out.write(String.valueOf(jsonObject));
             // out.write(jsonObject.toString());
             System.out.println(jsonObject.toString());
