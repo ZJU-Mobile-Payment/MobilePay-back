@@ -44,8 +44,8 @@ public class PaymentServlet extends HttpServlet {
 
             String hint = null;
             if (!ispermitted) {
-                jsonObject.put("result","Your healthstate does not meet the requirements and you can't pay for the bus");
-                jsonObject.put("cost",null);
+                jsonObject.put("result","Payment Failed");
+                jsonObject.put("cost","0");
                 a.wPassenger();
             } else {
                 a.wPassenger();
