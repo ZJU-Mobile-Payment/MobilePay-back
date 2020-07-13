@@ -55,19 +55,25 @@ public class UserDAO {
         //连接数据库
         Connection connection = DBManager.getConnection();
         PreparedStatement preparedStatement = null;
+        PreparedStatement preparedStatement2 = null;
 
         //SQL查询语句
         String username = "用户" + id;
         StringBuilder sqlStatement = new StringBuilder();
+        StringBuilder sqlBillCheck = new StringBuilder();
         sqlStatement.append("insert into user (id, password, username, isadmin) values (?, ?, ?, 0)");        //问号？的地方会被id替换
+        sqlBillCheck.append("insert into billcheck (usrid, billnum) values (?, 0)");
 
         //设置数据库的字段值
         try {
             preparedStatement = connection.prepareStatement(sqlStatement.toString());
+            preparedStatement2 = connection.prepareStatement(sqlBillCheck.toString());
             preparedStatement.setInt(1, id);
             preparedStatement.setString(2, password);
             preparedStatement.setString(3, username);
+            preparedStatement2.setInt(1, id);
             preparedStatement.executeUpdate();
+            preparedStatement2.executeUpdate();
             return "注册成功";
         } catch (SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
